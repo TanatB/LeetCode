@@ -22,19 +22,16 @@ Memory:
 """
 
 
-# TODO: Fix the twoSum()
 def twoSum(nums: list[int], target: int) -> list[int]:
-    two_index = []
+    two_pair = {}
     for index, value in enumerate(nums):
-        pair = target - value
-        if pair in nums[index+1:]:
-            two_index.append(index)
-            two_index.append(nums[index+1:].index(pair))
-            break
-    return two_index
+        if value in two_pair:
+            return [two_pair[value], index]
+        else:
+            two_pair[target - value] = index
 
 
 if __name__ == '__main__':
-    numbers = [3, 2, 4]
+    numbers = [3, 2, 4, 5]
     t = 6
     print(twoSum(numbers, t))
