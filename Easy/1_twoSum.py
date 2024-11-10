@@ -33,5 +33,5 @@ def twoSum(nums: list[int], target: int) -> list[int]:
 
 if __name__ == '__main__':
     numbers = [3, 2, 4, 5]
-    t = 6
+    t = 7
     print(twoSum(numbers, t))
