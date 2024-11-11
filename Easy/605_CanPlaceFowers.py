@@ -6,8 +6,7 @@ def canPlaceFlowers(flowerbed: list[int], n: int) -> bool:
             e_flowerbed[i] = 1
             n -= 1
     return n <= 0
-    
-        
+       
 
 if __name__ == '__main__':
     print(canPlaceFlowers([1,0,0,0,0,1], 2))
